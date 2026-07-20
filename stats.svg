@@ -32,7 +32,7 @@
       font-size: 32px;
       fill: #ff2a85;
       text-anchor: middle;
-      dominant-baseline: middle;
+      dominant-baseline: central;
     }
     .rank-circle-bg {
       stroke: #1b192e;
@@ -96,8 +96,9 @@
   <g transform="translate(0, 0)">
     <circle cx="80" cy="105" r="40" class="rank-circle-bg" />
     <circle cx="80" cy="105" r="40" class="rank-circle" filter="url(#glow)" />
-    <text x="80" cy="105" class="rank-text" filter="url(#glow)">S+</text>
-    <text x="80" cy="165" font-family="Inter" font-size="12" fill="#7928ca" text-anchor="middle" font-weight="600">RANKING</text>
+    <!-- Fixed: changed cy to y, and adjusted to 109 to be perfectly vertically centered -->
+    <text x="80" y="109" class="rank-text" filter="url(#glow)">S+</text>
+    <text x="80" y="165" font-family="Inter" font-size="12" fill="#7928ca" text-anchor="middle" font-weight="600">RANKING</text>
   </g>
 
   <!-- Statistics (Right Side) -->
@@ -105,32 +106,41 @@
     <!-- Title -->
     <text x="0" y="40" class="title">Developer Stats</text>
     
+    <!-- Fixed: nested group tags to separate vertical layout translation and horizontal slide-in transform -->
     <!-- Stat Item 1 -->
-    <g transform="translate(0, 60)" class="slide-in row-1">
-      <text x="0" y="12" class="stat-label">Total Commits</text>
-      <text x="240" y="12" class="stat-value">1,482</text>
-      <line x1="0" y1="24" x2="240" y2="24" stroke="#1f1b3a" stroke-width="1" />
+    <g transform="translate(0, 60)">
+      <g class="slide-in row-1">
+        <text x="0" y="12" class="stat-label">Total Commits</text>
+        <text x="240" y="12" class="stat-value">1,482</text>
+        <line x1="0" y1="24" x2="240" y2="24" stroke="#1f1b3a" stroke-width="1" />
+      </g>
     </g>
     
     <!-- Stat Item 2 -->
-    <g transform="translate(0, 92)" class="slide-in row-2">
-      <text x="0" y="12" class="stat-label">Stars Earned</text>
-      <text x="240" y="12" class="stat-value">342</text>
-      <line x1="0" y1="24" x2="240" y2="24" stroke="#1f1b3a" stroke-width="1" />
+    <g transform="translate(0, 92)">
+      <g class="slide-in row-2">
+        <text x="0" y="12" class="stat-label">Stars Earned</text>
+        <text x="240" y="12" class="stat-value">342</text>
+        <line x1="0" y1="24" x2="240" y2="24" stroke="#1f1b3a" stroke-width="1" />
+      </g>
     </g>
     
     <!-- Stat Item 3 -->
-    <g transform="translate(0, 124)" class="slide-in row-3">
-      <text x="0" y="12" class="stat-label">Pull Requests</text>
-      <text x="240" y="12" class="stat-value">186</text>
-      <line x1="0" y1="24" x2="240" y2="24" stroke="#1f1b3a" stroke-width="1" />
+    <g transform="translate(0, 124)">
+      <g class="slide-in row-3">
+        <text x="0" y="12" class="stat-label">Pull Requests</text>
+        <text x="240" y="12" class="stat-value">186</text>
+        <line x1="0" y1="24" x2="240" y2="24" stroke="#1f1b3a" stroke-width="1" />
+      </g>
     </g>
     
     <!-- Stat Item 4 -->
-    <g transform="translate(0, 156)" class="slide-in row-4">
-      <text x="0" y="12" class="stat-label">Issues Closed</text>
-      <text x="240" y="12" class="stat-value">94</text>
-      <line x1="0" y1="24" x2="240" y2="24" stroke="#1f1b3a" stroke-width="1" />
+    <g transform="translate(0, 156)">
+      <g class="slide-in row-4">
+        <text x="0" y="12" class="stat-label">Issues Closed</text>
+        <text x="240" y="12" class="stat-value">94</text>
+        <line x1="0" y1="24" x2="240" y2="24" stroke="#1f1b3a" stroke-width="1" />
+      </g>
     </g>
   </g>
 </svg>

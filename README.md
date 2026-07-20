@@ -22,7 +22,7 @@
     </td>
     <!-- Right Column: Interactive Local Stats Dashboard -->
     <td valign="top" width="60%" align="center">
-      <img src="stats.svg?v=1" width="420" alt="GitHub Stats Card">
+      <img src="stats.svg?v=2" width="420" alt="GitHub Stats Card">
       <br><br>
       <img src="langs.svg?v=1" width="420" alt="Languages Card">
       <br><br>
