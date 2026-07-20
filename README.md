@@ -3,9 +3,9 @@
 <p align="center">
   <!-- Banners that adapt automatically to GitHub Theme (Dark/Light mode) -->
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="banner.svg?v=3">
-    <source media="(prefers-color-scheme: light)" srcset="banner-light.svg?v=3">
-    <img alt="Navya Singh Animated Banner" src="banner.svg?v=3" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="banner.svg?v=4">
+    <source media="(prefers-color-scheme: light)" srcset="banner-light.svg?v=4">
+    <img alt="Navya Singh Animated Banner" src="banner.svg?v=4" width="100%">
   </picture>
 </p>
 
@@ -15,18 +15,18 @@
   <tr>
     <!-- Left Column: Swinging Lanyard ID Badge -->
     <td valign="top" width="40%" align="center">
-      <img src="lanyard.svg?v=3" width="280" alt="Swinging ID Lanyard Badge">
+      <img src="lanyard.svg?v=4" width="280" alt="Swinging ID Lanyard Badge">
       <br><br>
       <!-- Profile Views Counter -->
       <img src="https://komarev.com/counter/?username=NavyaSingh18&color=ff2a85&style=flat-square&label=Profile+Views" alt="Profile Views Counter">
     </td>
     <!-- Right Column: Interactive Local Stats Dashboard -->
     <td valign="top" width="60%" align="center">
-      <img src="stats.svg?v=3" width="420" alt="GitHub Stats Card">
+      <img src="stats.svg?v=4" width="420" alt="GitHub Stats Card">
       <br><br>
-      <img src="langs.svg?v=3" width="420" alt="Languages Card">
+      <img src="langs.svg?v=4" width="420" alt="Languages Card">
       <br><br>
-      <img src="trophies.svg?v=3" width="420" alt="Trophies Card">
+      <img src="trophies.svg?v=4" width="420" alt="Trophies Card">
     </td>
   </tr>
 </table>

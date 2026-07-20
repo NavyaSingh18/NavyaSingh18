@@ -51,11 +51,14 @@
     .let10 { animation-delay: 1.9s; }
     .let11 { animation-delay: 2.0s; }
 
-    .role-title-smil {
+    .role-title {
       font-family: 'Outfit', sans-serif;
       font-size: 24px;
       font-weight: 600;
     }
+    .role-1 { animation: cycle1 9s infinite; }
+    .role-2 { animation: cycle2 9s infinite; }
+    .role-3 { animation: cycle3 9s infinite; }
 
     .tagline-box {
       fill: #14112e;
@@ -209,6 +212,23 @@
         text-shadow: none;
       }
     }
+
+    /* Synchronized role cycles without animation-delay */
+    @keyframes cycle1 {
+      0%, 30% { opacity: 1; transform: translateY(0); }
+      33%, 97% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes cycle2 {
+      0%, 30% { opacity: 0; transform: translateY(10px); }
+      33%, 63% { opacity: 1; transform: translateY(0); }
+      66%, 100% { opacity: 0; transform: translateY(10px); }
+    }
+    @keyframes cycle3 {
+      0%, 63% { opacity: 0; transform: translateY(10px); }
+      66%, 96% { opacity: 1; transform: translateY(0); }
+      99%, 100% { opacity: 0; transform: translateY(10px); }
+    }
   </style>
 
   <defs>
@@ -307,30 +327,18 @@
       </text>
     </g>
 
-    <!-- Cycling Role Titles -->
+    <!-- Cycling Role Titles (With inline fail-safe opacity for non-animated environments to prevent overlap) -->
     <g transform="translate(70, 205)">
-      <text class="role-title-smil" x="0" y="0" fill="#ff2a85">
-        Software Developer
-        <animate attributeName="opacity" values="1;1;0;0;0;1" keyTimes="0;0.3;0.33;0.63;0.97;1" dur="9s" repeatCount="indefinite" />
-        <animateTransform attributeName="transform" type="translate" values="0 0; 0 0; 0 10; 0 10; 0 10; 0 0" keyTimes="0;0.3;0.33;0.63;0.97;1" dur="9s" repeatCount="indefinite" />
-      </text>
-      <text class="role-title-smil" x="0" y="0" fill="#ff2a85">
-        AI / ML Enthusiast
-        <animate attributeName="opacity" values="0;0;1;1;0;0;0" keyTimes="0;0.3;0.33;0.63;0.66;0.97;1" dur="9s" repeatCount="indefinite" />
-        <animateTransform attributeName="transform" type="translate" values="0 10; 0 10; 0 0; 0 0; 0 10; 0 10; 0 10" keyTimes="0;0.3;0.33;0.63;0.66;0.97;1" dur="9s" repeatCount="indefinite" />
-      </text>
-      <text class="role-title-smil" x="0" y="0" fill="#ff2a85">
-        Cybersecurity Student
-        <animate attributeName="opacity" values="0;0;0;1;1;0;0" keyTimes="0;0.63;0.66;0.96;0.99;1" dur="9s" repeatCount="indefinite" />
-        <animateTransform attributeName="transform" type="translate" values="0 10; 0 10; 0 10; 0 0; 0 0; 0 10; 0 10" keyTimes="0;0.63;0.66;0.96;0.99;1" dur="9s" repeatCount="indefinite" />
-      </text>
+      <text class="role-title role-1" x="0" y="0" fill="#ff2a85">Software Developer</text>
+      <text class="role-title role-2" x="0" y="0" fill="#ff2a85" style="opacity: 0;">AI / ML Enthusiast</text>
+      <text class="role-title role-3" x="0" y="0" fill="#ff2a85" style="opacity: 0;">Cybersecurity Student</text>
     </g>
 
     <!-- Tagline box -->
     <rect x="70" y="235" width="480" height="42" class="tagline-box" />
     <text x="90" y="261" class="tagline-text">"Exploring the intersection of AI/ML, Cybersecurity, and Software Engineering."</text>
 
-    <!-- Tech Stack Pills (Tailored to Navya's resume: HTML5, MySQL, Java, Python, React, TensorFlow, Git) -->
+    <!-- Tech Stack Pills -->
     <g transform="translate(70, 310)">
       <!-- HTML -->
       <g transform="translate(0, 0)">
@@ -369,7 +377,7 @@
       </g>
     </g>
 
-    <!-- Code Editor Card (Customized to TensorFlow/RNN python text generation) -->
+    <!-- Code Editor Card -->
     <rect x="40" y="430" width="670" height="260" class="code-editor" />
     <circle cx="70" cy="460" r="6" class="editor-dot-red" />
     <circle cx="90" cy="460" r="6" class="editor-dot-yellow" />
