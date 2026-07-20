@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="450" height="200" viewBox="0 0 450 200" fill="none">
+  <style>
+    .card {
+      fill: #0d0b1a;
+      stroke: url(#card-border-grad);
+      stroke-width: 1.5;
+      rx: 16px;
+    }
+    .title {
+      font-family: 'Outfit', 'Inter', -apple-system, sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      fill: #ff2a85;
+      letter-spacing: 0.5px;
+    }
+    .trophy-cell {
+      fill: #14112e;
+      stroke: #252054;
+      stroke-width: 1;
+      rx: 12px;
+      transition: all 0.3s ease;
+      transform-origin: 50% 50%;
+      opacity: 0;
+      transform: scale(0.8);
+      animation: popCell 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+    .cell-1 { animation-delay: 0.2s; }
+    .cell-2 { animation-delay: 0.4s; }
+    .cell-3 { animation-delay: 0.6s; }
+
+    .trophy-title {
+      font-family: 'Outfit', -apple-system, sans-serif;
+      font-size: 11px;
+      fill: #ffffff;
+      font-weight: 700;
+      text-anchor: middle;
+    }
+    .trophy-desc {
+      font-family: 'Inter', -apple-system, sans-serif;
+      font-size: 9px;
+      fill: #a5a1cc;
+      text-anchor: middle;
+    }
+    .trophy-rank {
+      font-family: 'Outfit', -apple-system, sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      fill: #00f2fe;
+      text-anchor: middle;
+    }
+    
+    .shine-overlay {
+      mix-blend-mode: overlay;
+      rx: 12px;
+    }
+
+    @keyframes popCell {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+
+  <defs>
+    <linearGradient id="card-border-grad" x1="0" y1="0" x2="450" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ff2a85" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#7928ca" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0.6"/>
+    </linearGradient>
+    <linearGradient id="trophy-gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="shine-grad" x1="0" y1="0" x2="1" y2="1">
+      <animate attributeName="x1" values="-1; 1.5" dur="2.5s" repeatCount="indefinite" />
+      <animate attributeName="y1" values="-1; 1.5" dur="2.5s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="0; 2.5" dur="2.5s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="0; 2.5" dur="2.5s" repeatCount="indefinite" />
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Card -->
+  <rect x="1" y="1" width="448" height="198" rx="16" class="card" />
+
+  <!-- Title -->
+  <text x="25" y="38" class="title">Developer Trophies</text>
+
+  <!-- Trophy Cell 1 (Commit Warrior) -->
+  <g transform="translate(25, 55)">
+    <rect width="120" height="120" class="trophy-cell cell-1" />
+    
+    <!-- Trophy Icon -->
+    <path d="M 60,35 C 50,35 48,43 48,45 L 48,50 C 48,55 52,60 57,60 L 57,65 L 52,65 L 52,70 L 68,70 L 68,65 L 63,65 L 63,60 C 68,60 72,55 72,50 L 72,45 C 72,43 70,35 60,35 Z" fill="url(#trophy-gold)" filter="url(#glow)" />
+    <path d="M 48,42 C 44,42 42,45 42,48 L 42,50 C 42,53 45,55 48,55 L 48,50 Z" stroke="url(#trophy-gold)" stroke-width="1.5" fill="none" />
+    <path d="M 72,42 C 76,42 78,45 78,48 L 78,50 C 78,53 75,55 72,55 L 72,50 Z" stroke="url(#trophy-gold)" stroke-width="1.5" fill="none" />
+    
+    <text x="60" y="90" class="trophy-title">Commit Master</text>
+    <text x="60" y="103" class="trophy-desc">1,400+ Commits</text>
+    <text x="60" y="24" class="trophy-rank">GOLD</text>
+    
+    <rect width="120" height="120" fill="url(#shine-grad)" class="shine-overlay" pointer-events="none" />
+  </g>
+
+  <!-- Trophy Cell 2 (PR Champion) -->
+  <g transform="translate(165, 55)">
+    <rect width="120" height="120" class="trophy-cell cell-2" />
+    
+    <!-- Star/Trophy Icon -->
+    <path d="M 60,33 L 64,43 L 75,44 L 67,52 L 69,63 L 60,57 L 51,63 L 53,52 L 45,44 L 56,43 Z" fill="#00f2fe" filter="url(#glow)" />
+    
+    <text x="60" y="90" class="trophy-title">PR Champion</text>
+    <text x="60" y="103" class="trophy-desc">180+ PRs Merged</text>
+    <text x="60" y="24" class="trophy-rank" style="fill: #00f2fe;">S-TIER</text>
+    
+    <rect width="120" height="120" fill="url(#shine-grad)" class="shine-overlay" pointer-events="none" />
+  </g>
+
+  <!-- Trophy Cell 3 (Multi-lingual) -->
+  <g transform="translate(305, 55)">
+    <rect width="120" height="120" class="trophy-cell cell-3" />
+    
+    <!-- Code/Brackets Icon -->
+    <path d="M 50,42 L 42,50 L 50,58 M 70,42 L 78,50 L 70,58 M 62,38 L 58,62" stroke="#ff2a85" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" />
+    
+    <text x="60" y="90" class="trophy-title">Polyglot Coder</text>
+    <text x="60" y="103" class="trophy-desc">5+ Tech Stacks</text>
+    <text x="60" y="24" class="trophy-rank" style="fill: #ff2a85;">EXPERT</text>
+    
+    <rect width="120" height="120" fill="url(#shine-grad)" class="shine-overlay" pointer-events="none" />
+  </g>
+</svg>
