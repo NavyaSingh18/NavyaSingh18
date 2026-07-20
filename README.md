@@ -3,9 +3,9 @@
 <p align="center">
   <!-- Banners that adapt automatically to GitHub Theme (Dark/Light mode) -->
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="banner.svg?v=1">
-    <source media="(prefers-color-scheme: light)" srcset="banner-light.svg?v=1">
-    <img alt="Navya Singh Animated Banner" src="banner.svg?v=1" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="banner.svg?v=2">
+    <source media="(prefers-color-scheme: light)" srcset="banner-light.svg?v=2">
+    <img alt="Navya Singh Animated Banner" src="banner.svg?v=2" width="100%">
   </picture>
 </p>
 

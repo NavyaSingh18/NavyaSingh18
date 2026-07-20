@@ -51,17 +51,11 @@
     .let10 { animation-delay: 1.9s; }
     .let11 { animation-delay: 2.0s; }
 
-    .role-title {
+    .role-title-smil {
       font-family: 'Outfit', sans-serif;
       font-size: 24px;
       font-weight: 600;
-      fill: #d01c68;
-      opacity: 0;
-      animation: roleCycle 9s infinite;
     }
-    .role-1 { animation-delay: 0s; }
-    .role-2 { animation-delay: 3s; }
-    .role-3 { animation-delay: 6s; }
 
     .tagline-box {
       fill: #eae6f3;
@@ -182,14 +176,6 @@
     @keyframes fadeIn {
       to { opacity: 1; }
     }
-    @keyframes roleCycle {
-      0%, 28%, 100% { opacity: 0; transform: translateY(10px); }
-      3%, 25% { opacity: 1; transform: translateY(0); }
-      31%, 61% { opacity: 0; transform: translateY(10px); }
-      36%, 58% { opacity: 1; transform: translateY(0); }
-      64%, 94% { opacity: 0; transform: translateY(10px); }
-      69%, 91% { opacity: 1; transform: translateY(0); }
-    }
     @keyframes floatOrb {
       0% { transform: translateY(0px) scale(1); opacity: 0.15; }
       100% { transform: translateY(-30px) scale(1.1); opacity: 0.3; }
@@ -306,11 +292,23 @@
       </text>
     </g>
 
-    <!-- Cycling Role Titles -->
+    <!-- Cycling Role Titles using native SMIL animations to prevent browser rendering overlaps -->
     <g transform="translate(70, 205)">
-      <text class="role-title role-1">Full Stack Developer</text>
-      <text class="role-title role-2">AI &amp; Web Enthusiast</text>
-      <text class="role-title role-3">Creative Interface Designer</text>
+      <text class="role-title-smil" x="0" y="0" fill="#d01c68">
+        Full Stack Developer
+        <animate attributeName="opacity" values="1;1;0;0;0;1" keyTimes="0;0.3;0.33;0.63;0.97;1" dur="9s" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="translate" values="0 0; 0 0; 0 10; 0 10; 0 10; 0 0" keyTimes="0;0.3;0.33;0.63;0.97;1" dur="9s" repeatCount="indefinite" />
+      </text>
+      <text class="role-title-smil" x="0" y="0" fill="#d01c68">
+        AI &amp; Web Enthusiast
+        <animate attributeName="opacity" values="0;0;1;1;0;0;0" keyTimes="0;0.3;0.33;0.63;0.66;0.97;1" dur="9s" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="translate" values="0 10; 0 10; 0 0; 0 0; 0 10; 0 10; 0 10" keyTimes="0;0.3;0.33;0.63;0.66;0.97;1" dur="9s" repeatCount="indefinite" />
+      </text>
+      <text class="role-title-smil" x="0" y="0" fill="#d01c68">
+        Creative Interface Designer
+        <animate attributeName="opacity" values="0;0;0;1;1;0;0" keyTimes="0;0.63;0.66;0.96;0.99;1" dur="9s" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="translate" values="0 10; 0 10; 0 10; 0 0; 0 0; 0 10; 0 10" keyTimes="0;0.63;0.66;0.96;0.99;1" dur="9s" repeatCount="indefinite" />
+      </text>
     </g>
 
     <!-- Tagline box -->
