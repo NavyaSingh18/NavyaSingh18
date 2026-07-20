@@ -3,9 +3,9 @@
 <p align="center">
   <!-- Banners that adapt automatically to GitHub Theme (Dark/Light mode) -->
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="banner.svg?v=6">
-    <source media="(prefers-color-scheme: light)" srcset="banner-light.svg?v=6">
-    <img alt="Navya Singh Animated Banner" src="banner.svg?v=6" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="banner.svg?v=7">
+    <source media="(prefers-color-scheme: light)" srcset="banner-light.svg?v=7">
+    <img alt="Navya Singh Animated Banner" src="banner.svg?v=7" width="100%">
   </picture>
 </p>
 
@@ -15,18 +15,18 @@
   <tr>
     <!-- Left Column: Swinging Lanyard ID Badge -->
     <td valign="top" width="40%" align="center">
-      <img src="lanyard.svg?v=6" width="280" alt="Swinging ID Lanyard Badge">
+      <img src="lanyard.svg?v=7" width="280" alt="Swinging ID Lanyard Badge">
       <br><br>
       <!-- Profile Views Counter -->
-      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FNavyaSingh18%2FNavyaSingh18&amp;count_bg=%23FF2A85&amp;title_bg=%2316122D&amp;icon=&amp;icon_color=%23E7E7E7&amp;title=Views&amp;edge_flat=true" alt="Profile Views Counter">
+      <img src="https://hits.dwyl.com/NavyaSingh18/NavyaSingh18.svg?style=flat-square&amp;color=ff2a85" alt="Profile Views Counter">
     </td>
     <!-- Right Column: Interactive Local Stats Dashboard -->
     <td valign="top" width="60%" align="center">
-      <img src="stats.svg?v=6" width="420" alt="GitHub Stats Card">
+      <img src="stats.svg?v=7" width="420" alt="GitHub Stats Card">
       <br><br>
-      <img src="langs.svg?v=6" width="420" alt="Languages Card">
+      <img src="langs.svg?v=7" width="420" alt="Languages Card">
       <br><br>
-      <img src="trophies.svg?v=6" width="420" alt="Trophies Card">
+      <img src="trophies.svg?v=7" width="420" alt="Trophies Card">
     </td>
   </tr>
 </table>
