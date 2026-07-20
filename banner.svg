@@ -327,11 +327,11 @@
       </text>
     </g>
 
-    <!-- Cycling Role Titles (With inline fail-safe opacity for non-animated environments to prevent overlap) -->
+    <!-- Fixed: Use native presentation attributes (opacity and transform) for robust fallback inside sanitizers -->
     <g transform="translate(70, 205)">
-      <text class="role-title role-1" x="0" y="0" fill="#ff2a85">Software Developer</text>
-      <text class="role-title role-2" x="0" y="0" fill="#ff2a85" style="opacity: 0;">AI / ML Enthusiast</text>
-      <text class="role-title role-3" x="0" y="0" fill="#ff2a85" style="opacity: 0;">Cybersecurity Student</text>
+      <text class="role-title role-1" x="0" y="0" fill="#ff2a85" opacity="1" transform="translate(0, 0)">Software Developer</text>
+      <text class="role-title role-2" x="0" y="0" fill="#ff2a85" opacity="0" transform="translate(0, 10)">AI / ML Enthusiast</text>
+      <text class="role-title role-3" x="0" y="0" fill="#ff2a85" opacity="0" transform="translate(0, 10)">Cybersecurity Student</text>
     </g>
 
     <!-- Tagline box -->
